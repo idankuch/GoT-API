@@ -5,10 +5,8 @@ import CharactersList from "./components/CharacterList";
 import "./App.css";
 
 function App() {
-  console.log("App rendered");
-  const [apiDB, isLoading, error] = useFetch(
-    "https://thronesapi.com/api/v2/Characters"
-  );
+  const url = "https://thronesapi.com/api/v2/Characters";
+  const { apiDB, isLoading, error } = useFetch(url);
   const [lastShownItem, setLastShownItem] = useState(4);
   const [isDisabled, setDisabled] = useState(false);
 

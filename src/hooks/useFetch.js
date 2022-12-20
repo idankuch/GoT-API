@@ -15,7 +15,7 @@ function useFetch(url) {
       });
   }, []);
 
-  return [apiDB, isLoading, error];
+  return { apiDB, isLoading, error };
 }
 
 export default useFetch;
