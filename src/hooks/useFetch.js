@@ -11,8 +11,9 @@ function useFetch(url) {
       .then((data) => {
         setApiDB(data);
         setLoading(false);
-        console.log("DATA FETCHED: useFetch");
-      });
+        }).catch(res => {
+          setError(true); console.log(`Error: ${res}`)
+        });
   }, []);
 
   return { apiDB, isLoading, error };
