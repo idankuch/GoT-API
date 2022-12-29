@@ -1,10 +1,12 @@
 import React from "react";
+import InfoIcon from "./InfoIcon";
 import Card from "./UI/Card/Card";
 
 function Character(props) {
+  // console.log(props);
   return (
     <Card className='card'>
-      <div>tooltip</div>
+      <InfoIcon data={`${props.firstname}, ${props.lastname}`} />
       <div>
         <img src={props.imageSrc} height='120px' />
       </div>
